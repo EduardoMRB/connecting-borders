@@ -1,0 +1,56 @@
+<!-- Begin header -->
+<header>
+	<!-- Begin logo -->
+	<div id="logo">
+		<a href="{{ url:site  }}" title="Home"><img src="img/logo_header.png" /></a>
+	</div>
+	<!-- End logo -->
+	<!-- Begin user meta -->
+	
+	{{ if language:isBR }}
+		<div id="user-meta">
+		<a href="{{ url:site uri='lojas' }}" style="margin-right: 12px;">Lojas</a>
+		{{ if user:logged_in }}
+
+		<a href="{{ url:site uri='users/logout' }}" style="margin-right: 20px;" >{{ helper:lang line="logout_label" }}</a>
+		{{ if settings:enable_profiles }}
+		<a href="{{ url:site uri='edit-profile' }}"  style="margin-right: 25px;">{{ helper:lang line="edit_profile_label" }}</a>
+		{{ endif }}
+
+		{{ else }}
+		<a  id="login-button" style="margin-right: 14px; margin-left: 2px;">Login</a><a href="{{ url:site }}register" style="margin-right: 15px;" >{{ helper:lang line="user_register_btn" }}</a>
+		<form action="{{ url:site uri='users/login' }}" method="post" accept-charset="utf-8" id="login-small">
+			<input type="hidden" name="redirect_to" value="{{ url:current }}" />
+			<a id="close-form">Fechar</a>
+			<ul>
+				<li class="email">
+					<input type="text" id="email" name="email" maxlength="120" placeholder="{{ helper:lang line="user_email" }}" />
+				</li>
+
+				<li class="pword">
+					<input type="password" id="password" name="password" maxlength="20" placeholder="{{ helper:lang line="user_password" }}" />
+				</li>
+
+				<li class="form-buttons">
+					<input type="submit" value="{{ helper:lang line='user_login_btn' }}" name="btnLogin" />
+				</li>
+				<li>
+					<label>
+						<input type="checkbox" id="remember-checksidebar" name="remember" value="1"  />
+						{{ helper:lang line="user_remember" }}</label>
+				</li>
+			</ul>
+		</form>
+		{{ endif }}
+		<a href="{{ url:site uri='contato' }}" style="margin-right: 20px;">Contato</a>
+
+
+	</div>
+	{{ else }}
+	<div style="height: 20px; width: 310px; float : right;"></div>
+	{{ endif }}
+	<!-- End user meta -->
+	{{ widgets:instance id="14"}}
+
+</header>
+<!-- End header -->

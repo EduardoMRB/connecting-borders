@@ -1,0 +1,29 @@
+@-moz-document url-prefix() {
+	.orcamento td#select-box select {
+		-moz-appearance : menuitem;
+		overflow: hidden;
+		width: 120%;
+		outline: none;
+		border : none;
+	}
+	
+	.orcamento_turismo td#select-box select {
+		-moz-appearance : menuitem;
+		overflow: hidden;
+		width: 120%;
+		outline: none;
+		border : none;
+	}
+	
+	table.informations {
+		width: 100%; 
+		margin: 0 0 0 20px;
+		float: left;
+		margin-bottom: 20px;
+	}
+	
+	div.school_map {
+		float: left;
+	}
+
+}
