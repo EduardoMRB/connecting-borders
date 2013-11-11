@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Widget_Orcamento extends Widgets {
 
     public $title = array(
-        'en' => 'Stimate',
+        'en' => 'Estimate',
         'br' => 'Orçamento',
     );
     public $description = array(
