@@ -25,7 +25,7 @@ class Widget_Orcamento extends Widgets {
         'br' => 'Orçamento',
     );
     public $description = array(
-        'en' => 'Fast path do Stimate',
+        'en' => 'Fast path do Estimate',
         'br' => 'Atalho para geração de orçamento',
     );
     public $author = 'Gustavo Liberatti';
